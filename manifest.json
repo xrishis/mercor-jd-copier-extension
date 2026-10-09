@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Mercor JD Copier",
+  "version": "1.0.0",
+  "description": "Adds a floating circular copy button on Mercor job pages to copy job descriptions quickly.",
+  "permissions": ["clipboardWrite"],
+  "host_permissions": ["https://work.mercor.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://work.mercor.com/jobs/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
